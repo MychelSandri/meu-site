@@ -3,7 +3,19 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main style={{ fontFamily: 'Arial', padding: '40px', textAlign: 'center' }}>
-      <h1>🛍️ 3Dreams Impressões 3D</h1>
+
+    <div style={{
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      height: "300px" // opcional, define altura da área
+      }}>
+      <img
+        src="/images/capa.png"
+        alt="Capa"
+        style={{ width: "1000px" }}
+      />
+    </div>
       <p>Modelos exclusivos e personalizados impressos em 3D</p>
 
       <div style={{
