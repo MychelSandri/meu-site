@@ -1,54 +1,76 @@
+import { HomeHeader } from '@/components/HomeHeader'; // Note o uso do alias @/components
+import { HeroCarousel } from '@/components/HeroCarousel';
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <main style={{ fontFamily: 'Arial', padding: '40px', textAlign: 'center' }}>
+    <main>
+      {/* Seção 1: Header (Logo e Menu) */}
+      <HomeHeader />
 
-    <div style={{
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      height: "300px" // opcional, define altura da área
-      }}>
-      <img
-        src="/images/capa.png"
-        alt="Capa"
-        style={{ width: "1000px" }}
-      />
-    </div>
-      <p>Modelos exclusivos e personalizados impressos em 3D</p>
+      {/* Seção 2: Painel de Destaque (Carrossel) */}
+      <HeroCarousel />
 
+      {/* ... Aqui virão as próximas seções, como seus cards de produto. */}
       <div style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-        gap: '20px',
-        marginTop: '40px'
-      }}>
-        <div style={{ border: '1px solid #ddd', borderRadius: '10px', padding: '20px' }}>
-          <img src="/images/chaveiro-bike.jpg" alt="Chaveiro de Bicicleta" style={{ width: '100%' }} />
-          <h3>Chaveiro Bicicleta</h3>
-          <p>R$ 15,00</p>
-          <button style={{ background: '#000', color: '#fff', padding: '10px', borderRadius: '5px' }}>
-            Comprar
-          </button>
-        </div>
-
-        <div style={{ border: '1px solid #ddd', borderRadius: '10px', padding: '20px' }}>
-          <img src="/images/suporte-celular.jpg" alt="Suporte de Celular" style={{ width: '100%' }} />
-          <h3>Suporte de Celular</h3>
-          <p>R$ 25,00</p>
-          <button style={{ background: '#000', color: '#fff', padding: '10px', borderRadius: '5px' }}>
-            Comprar
-          </button>
-        </div>
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "300px" // opcional, define altura da área
+        }}>
+        <img
+          src="/images/capa.png"
+          alt="Capa"
+          style={{ width: "1000px" }}
+        />
       </div>
+        <p>Modelos exclusivos e personalizados impressos em 3D</p>
 
-      <footer style={{ marginTop: '50px', fontSize: '14px', color: '#555' }}>
-        Contato: <b>(46) 99909-9065</b> | Instagram: <b>@3dreams.impressao3d</b>
-      </footer>
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+          gap: '20px',
+          marginTop: '40px'
+        }}>
+          <div style={{ border: '1px solid #ddd', borderRadius: '10px', padding: '20px' }}>
+            <img src="/images/chaveiro-bike.jpg" alt="Chaveiro de Bicicleta" style={{ width: '100%' }} />
+            <h3>Chaveiro Bicicleta</h3>
+            <p>R$ 15,00</p>
+            <button style={{ background: '#000', color: '#fff', padding: '10px', borderRadius: '5px' }}>
+              Comprar
+            </button>
+          </div>
+
+          <div style={{ border: '1px solid #ddd', borderRadius: '10px', padding: '20px' }}>
+            <img src="/images/suporte-celular.jpg" alt="Suporte de Celular" style={{ width: '100%' }} />
+            <h3>Suporte de Celular</h3>
+            <p>R$ 25,00</p>
+            <button style={{ background: '#000', color: '#fff', padding: '10px', borderRadius: '5px' }}>
+              Comprar
+            </button>
+          </div>
+        </div>
+
+        <footer style={{ marginTop: '50px', fontSize: '14px', color: '#555' }}>
+          Contato: <b>(46) 99909-9065</b> | Instagram: <b>@3dreams.impressao3d</b>
+        </footer>
+
     </main>
   );
 }
+
+
+
+
+
+// export default function Home() {
+//   return (
+//     <main style={{ fontFamily: 'Arial', padding: '40px', textAlign: 'center' }}>
+//
+//
+//     </main>
+//   );
+// }
 
 
 
